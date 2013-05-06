@@ -1,0 +1,14 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "grunt": "0.4.x",
+    "grunt-contrib-copy": "*",
+    "grunt-mocha": "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-requirejs": "*"
+  }
+}
