@@ -8,7 +8,7 @@ It requires the following installations:
 npm install
 cd server
 npm install
-cd app
+cd ../app
 bower install
 cd tests
 bower install
