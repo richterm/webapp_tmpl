@@ -11,7 +11,8 @@ npm install
 cd app
 bower install
 cd tests
-bower install```
+bower install
+```
 
 When all packages are installed, this contains
 
