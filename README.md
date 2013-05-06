@@ -4,13 +4,14 @@ Although I highly appreciate tools like yeoman.io and Bower (I use the latter my
 
 It requires the following installations:
 
-  npm install
-  cd server
-  npm install
-  cd app
-  bower install
-  cd tests
-  bower install
+```sh
+npm install
+cd server
+npm install
+cd app
+bower install
+cd tests
+bower install```
 
 When all packages are installed, this contains
 
