@@ -9,6 +9,10 @@ requirejs.config({
       "router": "routers/Router"
 	},
 	shim: {
+		"underscore": {
+			deps: [],
+			exports: "_"
+		},
 		"backbone": {
 			deps: [
 				"underscore",

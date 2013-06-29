@@ -2,9 +2,8 @@
   "name": "app",
   "version": "0.0.0",
   "dependencies": {
-  	"jquery": "*",
-  	"underscore": "*",
-  	"backbone": "*",
+  	"jquery": "1.9.x",
+  	"backbone.marionette": "*",
   	"requirejs": "*",
   	"bootstrap": "*"
   }
