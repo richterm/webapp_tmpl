@@ -10,6 +10,7 @@ cd server
 npm install
 cd ../app
 bower install
+bower install eeroan/requirejs-tpl
 cd tests
 bower install
 ```
@@ -20,6 +21,7 @@ When all packages are installed, this contains
 2. the frontend modules
   - jQuery
   - BackboneJS
+  - MarionetteJS
   - UnderscoreJS
   - Bootstrap
   - RequireJS
