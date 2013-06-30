@@ -4,6 +4,7 @@
   "dependencies": {
   	"jquery": "1.9.x",
   	"backbone.marionette": "*",
+  	"underscore": "*",
   	"requirejs": "*",
   	"bootstrap": "*"
   }
