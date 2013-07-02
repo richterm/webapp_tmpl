@@ -25,6 +25,7 @@ When all packages are installed, this contains
   - UnderscoreJS
   - Bootstrap
   - RequireJS
+  - RequireJS-tpl plugin (eeroan's fork)
   - chaiJS
   - sinonJS
   - mocha
