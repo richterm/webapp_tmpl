@@ -90,26 +90,61 @@ module.exports = function(grunt) {
 		},
 
 		copy: {
-			dist: {
+			distweb: {
 				files: [
 					{
 						src: "app/components/requirejs/require.js",
-						dest: "app/dist/components/requirejs/require.js"
+						dest: "app/dist/web/components/requirejs/require.js"
 					},
 					{
 						src: "app/index.html",
-						dest: "app/dist/index.html"
+						dest: "app/dist/web/index.html"
 					},
 					{
 						src: "app/scripts/main.built.js",
-						dest: "app/dist/scripts/main.js"
+						dest: "app/dist/web/scripts/main.js"
 					},
 					{
 						expand: true,
 						cwd: "app/styles/",
 						src: "**/*.css",
-						dest: "app/dist/styles",
+						dest: "app/dist/web/styles",
 						ext: ".css"
+					}
+				]
+			},
+			distcpa: {
+				files: [
+					{
+						src: "app/components/requirejs/require.js",
+						dest: "app/dist/cpa/components/requirejs/require.js"
+					},
+					{
+						src: "app/index.html",
+						dest: "app/dist/cpa/index.html"
+					},
+					{
+						src: "app/scripts/main.built.js",
+						dest: "app/dist/cpa/scripts/main.js"
+					},
+					{
+						expand: true,
+						cwd: "app/styles/",
+						src: "**/*.css",
+						dest: "app/dist/cpa/styles",
+						ext: ".css"
+					}
+				]
+			},
+			cpa: {
+				files: [
+					{
+						src: "app/cpa.js",
+						dest: "app/dist/cpa/cpa.js"
+					},
+					{
+						src: "app/manifest.json",
+						dest: "app/dist/cpa/manifest.json"
 					}
 				]
 			}
@@ -119,7 +154,9 @@ module.exports = function(grunt) {
 
 	// Default task.
 	grunt.registerTask('default', [ 'coffee', 'jshint', 'mocha' ]);
-	grunt.registerTask('deploy', [ 'default', 'requirejs:concat', "copy" ]);
-	grunt.registerTask('deployugly', [ 'default', 'requirejs:concatugly', "copy" ]);
+	grunt.registerTask('deploy', [ 'default', 'requirejs:concat', "copy:distweb" ]);
+	grunt.registerTask('deploycpa', [ 'default', 'requirejs:concat', "copy:distcpa", "copy:cpa" ]);
+	grunt.registerTask('deployugly', [ 'default', 'requirejs:concatugly', "copy:distweb" ]);
+	grunt.registerTask('deployuglycpa', [ 'default', 'requirejs:concatugly', "copy:distcpa", "copy:cpa" ]);
 
 };

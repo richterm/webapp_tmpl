@@ -1,0 +1,23 @@
+{
+  // Required
+  "name": "CPA Test",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "permissions": [
+    "storage",
+    "http://www.maximilian-richter.com/"
+  ],
+
+  // Recommended
+  "description": "A plain text description",
+  "app": {
+    "background": {
+      "scripts": ["cpa.js"]
+    }
+  },
+  "sandbox": {
+  		"scripts": [
+  			"components/requirejs-tpl/tpl.js"
+  		]
+  }
+}
