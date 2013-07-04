@@ -5,6 +5,7 @@ requirejs.config({
 		"backbone.wreqr": "../components/backbone.marionette/public/javascripts/backbone.wreqr",
 		"backbone.babysitter": "../components/backbone.marionette/public/javascripts/backbone.babysitter",
 		"backbone.augment": "../components/backbone.marionette/public/javascripts/backbone.augment",
+		"backbone.chromestorage": "../components/Backbone.ChromeStorage/backbone.chromestorage",
 		"underscore": "../components/underscore/underscore",
       "backbone": "../components/backbone/backbone",
       "jquery": "../components/jquery/jquery",
@@ -50,7 +51,7 @@ requirejs.config({
 	}
 });
 
-define(["backbone.marionette", "routers/App", "controllers/App", "layouts/App"], function(Marionette, AppRouter, AppController, AppLayout){
+define(["backbone.marionette", "routers/App", "controllers/App", "layouts/App", "backbone.chromestorage"], function(Marionette, AppRouter, AppController, AppLayout){
 
 	var App = window.App = new Marionette.Application({});
 
