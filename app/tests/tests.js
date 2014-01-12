@@ -1,6 +1,6 @@
 define(
 	[
-		"../tests/components/chai/chai",
+		"../tests/bower_components/chai/chai",
 		"../tests/test"
 	],	function(chai){
 
