@@ -1,16 +1,16 @@
 requirejs.config({
 	baseUrl: "scripts",
 	paths: {
-		"backbone.marionette": "../components/backbone.marionette/lib/core/backbone.marionette",
-		"backbone.wreqr": "../components/backbone.marionette/public/javascripts/backbone.wreqr",
-		"backbone.babysitter": "../components/backbone.marionette/public/javascripts/backbone.babysitter",
-		"backbone.augment": "../components/backbone.marionette/public/javascripts/backbone.augment",
-		"backbone.chromestorage": "../components/Backbone.ChromeStorage/backbone.chromestorage",
-		"underscore": "../components/underscore/underscore",
-      "backbone": "../components/backbone/backbone",
-      "jquery": "../components/jquery/jquery",
-      "require": "../components/requirejs/require",
-      "tpl": "../components/requirejs-tpl/tpl"
+		"backbone.marionette": "../bower_components/backbone.marionette/lib/core/backbone.marionette",
+		"backbone.wreqr": "../bower_components/backbone.marionette/public/javascripts/backbone.wreqr",
+		"backbone.babysitter": "../bower_components/backbone.marionette/public/javascripts/backbone.babysitter",
+		"backbone.augment": "../bower_components/backbone.marionette/public/javascripts/backbone.augment",
+		"backbone.chromestorage": "../bower_components/Backbone.ChromeStorage/backbone.chromestorage",
+		"underscore": "../bower_components/underscore/underscore",
+      "backbone": "../bower_components/backbone/backbone",
+      "jquery": "../bower_components/jquery/jquery",
+      "require": "../bower_components/requirejs/require",
+      "tpl": "../bower_components/requirejs-tpl/tpl"
 	},
 	shim: {
 		"underscore": {
@@ -51,20 +51,7 @@ requirejs.config({
 	}
 });
 
-define(["backbone.marionette", "routers/App", "controllers/App", "layouts/App", "backbone.chromestorage"], function(Marionette, AppRouter, AppController, AppLayout){
-
-	var App = window.App = new Marionette.Application({});
-
-	App.addInitializer(function(options) {
-		App.appRouter = new AppRouter({
-			controller: new AppController()
-		});
-
-		App.appLayout = new AppLayout({
-			el: "#app"
-		});
-
-	});
+define(["App", "backbone"], function(App, Backbone){
 
 	App.on("initialize:after", function(options) {
 		Backbone.history.start();

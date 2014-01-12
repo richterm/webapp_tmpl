@@ -1,9 +1,8 @@
 {
-  "directory": "components",
   "name": "app",
   "version": "0.0.0",
   "dependencies": {
-  	"jquery": "1.9.x",
+  	"jquery": "*",
   	"backbone.marionette": "*",
   	"underscore": "*",
   	"requirejs": "*",

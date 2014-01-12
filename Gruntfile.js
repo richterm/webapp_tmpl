@@ -52,15 +52,19 @@ module.exports = function(grunt) {
 				browser: true,
 				globals: {
 					console: true,
-					define: true
+					define: true,
+					describe: true,
+					it: true,
+					expect: true,
+					assert: true,
+					require: true,
+					requirejs: true
 				}
 			},
 			files: [
-				'app/scripts/models/**/*.js',
-				'app/scripts/views/**/*.js',
-				'app/scripts/collections/**/*.js',
-				'app/scripts/routers/**/*.js',
-				'app/tests/(!lib)/**/*.js'
+				'app/scripts/**/*.js',
+				'app/scripts/(!bower_components)/**/*.js',
+				'app/tests/(!bower_components)/**/*.js'
 			]
 		},
 

@@ -1,5 +1,4 @@
 {
-  "directory": "components",
   "name": "app: tests",
   "version": "0.0.0",
   "dependencies": {
